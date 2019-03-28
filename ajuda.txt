@@ -1,3 +1,6 @@
+- Projeto principal
+https://rafaell-lycan.com/2015/construindo-restful-api-laravel-parte-1/
+
 -> Estudar assim que possivel:
 
 - Utilizar "Routes" de forma mais organizada com "middlewares"
