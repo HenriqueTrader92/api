@@ -1,0 +1,8 @@
+-> Estudar assim que possivel:
+
+- Utilizar "Routes" de forma mais organizada com "middlewares"
+    Usei o link... para aprender isso.
+    https://blog.especializati.com.br/middleware-no-laravel-filtros/
+Tipos de "response" como "json"
+- Proteção contra "CSRF" e "CORS"
+    Tive que buscar na documentação, CSRF: https://laravel.com/docs/5.8/csrf
