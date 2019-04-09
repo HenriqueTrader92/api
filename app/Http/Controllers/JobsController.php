@@ -10,6 +10,10 @@ use App\Http\Controllers\Controller;
 
 class JobsController extends Controller
 {
+    // public function __construct() {
+    //     $this->middleware('auth', ['except' => ['index', 'show']]);
+    // }
+
     public function index()
     {
         $jobs = Job::with('company')->get();
@@ -43,5 +47,27 @@ class JobsController extends Controller
         $job->save();
 
         return response()->json($job);
+    }
+
+    public function store(Request $request)
+    {
+        $job = new Job();
+        $job->fill($request->all());
+        $job->save();
+
+        return response()->json($job, 201);
+    }
+
+    public function destroy($id)
+    {
+        $job = Job::find($id);
+
+        if(!$job) {
+            return response()->json([
+                'message'   => 'Record not found',
+            ], 404);
+        }
+
+        $job->delete();
     }
 }
